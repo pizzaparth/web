@@ -492,20 +492,28 @@ a:hover {
 
 @media (max-width: 600px) {
   .site-header .site-wrapper {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    position: relative;
   }
 
   /* Show hamburger, hide nav by default on mobile */
   .nav-toggle {
     display: flex;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
   }
 
   #nav-menu {
     display: none;
-    width: 100%;
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    left: 0;
+    right: 0;
     border-top: 1px solid var(--border);
     padding-top: 0.75rem;
     padding-bottom: 0.5rem;
+    background-color: var(--bg);
+    z-index: 90;
   }
 
   #nav-menu.nav-open {
@@ -524,6 +532,7 @@ a:hover {
     letter-spacing: 0.08em;
     font-size: 0.95rem;
     font-weight: 500;
+    touch-action: manipulation;
   }
 
   .site-nav li a.active {
@@ -541,10 +550,6 @@ a:hover {
 
   .site-header {
     padding: 0.85rem 0;
-  }
-
-  #nav-menu {
-    margin-top: 0.65rem;
   }
 
   .nav-toggle {
