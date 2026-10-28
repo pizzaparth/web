@@ -1,0 +1,291 @@
+/* ============================================================
+   Design Tokens & CSS Custom Properties
+   Based on style.md — Ksan Relay Visual Style Guide
+   ============================================================ */
+
+:root {
+  /* Colour palette — pure monochrome, white at varying opacity */
+  --bg: #000000;
+  --fg: #ffffff;
+  --fg-2: rgba(255, 255, 255, 0.8);
+  --fg-3: rgba(255, 255, 255, 0.62);
+  --line: rgba(255, 255, 255, 0.12);
+  --line-2: rgba(255, 255, 255, 0.24);
+  --line-3: rgba(255, 255, 255, 0.45);
+  --glow: 0 0 18px rgba(255, 255, 255, 0.06);
+
+  /* Easing */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Border radii */
+  --r-card: 8px;
+  --r-item: 16px;
+  --r-panel: 24px;
+  --r-pill: 999px;
+
+  /* Fluid type scale (~1.25 modular) */
+  --step--2: clamp(0.75rem, 0.7rem + 0.15vw, 0.8125rem);
+  --step--1: clamp(0.875rem, 0.83rem + 0.15vw, 0.9375rem);
+  --step-0: clamp(1.0625rem, 0.98rem + 0.28vw, 1.1875rem);
+  --step-1: clamp(1.1875rem, 1.06rem + 0.42vw, 1.4375rem);
+  --step-2: clamp(1.3125rem, 1.15rem + 0.56vw, 1.625rem);
+  --step-3: clamp(1.875rem, 1.4rem + 1.6vw, 3.25rem);
+  --step-4: clamp(2.625rem, 1.8rem + 2.8vw, 5rem);
+  --step-5: clamp(2.375rem, 1.6rem + 2.6vw, 4.5rem);
+
+  /* Spacing */
+  --container-max: 1240px;
+  --gutter: clamp(20px, 4vw, 40px);
+  --section-gap: clamp(56px, 6vw, 96px);
+
+  /* Font families */
+  --font-sans: "Geist Variable", "Arial", sans-serif;
+  --font-mono: "JetBrains Mono Variable", "Courier New", monospace;
+
+  color-scheme: dark;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--fg-2);
+  background-color: var(--bg);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--fg);
+  color: var(--bg);
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--fg);
+  font-weight: 500;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--step-5);
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+}
+
+h2 {
+  font-size: var(--step-3);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: var(--step-2);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+p {
+  text-wrap: pretty;
+  line-height: 1.65;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-gap);
+  border-top: 1px solid var(--line);
+}
+
+.section:first-of-type {
+  border-top: none;
+}
+
+/* ============================================================
+   Technical Label
+   ============================================================ */
+
+.tech-label {
+  font-family: var(--font-mono);
+  font-size: var(--step--2);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-3);
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
+
+a {
+  color: var(--fg-2);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+a:hover {
+  color: var(--fg);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 24px;
+  font-family: var(--font-sans);
+  font-size: var(--step--1);
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  text-decoration: none;
+}
+
+.button:hover {
+  border-color: var(--line-3);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button--primary {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.button--primary:hover {
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--bg);
+}
+
+/* ============================================================
+   Background Grid
+   ============================================================ */
+
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 25%, black, transparent);
+  -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 25%, black, transparent);
+}
+
+/* ============================================================
+   Skip Link
+   ============================================================ */
+
+.skip-link {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100px);
+  z-index: 1000;
+  padding: 12px 24px;
+  background: var(--fg);
+  color: var(--bg);
+  border-radius: var(--r-pill);
+  font-weight: 500;
+  font-size: var(--step--1);
+  opacity: 0;
+  transition: all 0.2s var(--ease);
+}
+
+.skip-link:focus-visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* ============================================================
+   Focus
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ============================================================
+   Responsive — mobile card radius
+   ============================================================ */
+
+@media (max-width: 640px) {
+  :root {
+    --r-card: 10px;
+  }
+}
+
+/* ============================================================
+   Safe Area
+   ============================================================ */
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}
