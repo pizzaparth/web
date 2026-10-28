@@ -1,33 +1,46 @@
 import styles from "./page.module.css";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import TerminalCard from "@/components/TerminalCard";
 
 export default function Home() {
   return (
     <div className="container">
-      {/* Hero */}
-      <section className={styles.hero}>
-        <span className="tech-label">Portfolio</span>
-        <h1 className={styles.headline}>
-          Parth Pancholi
-        </h1>
-        <p className={styles.lead}>
-          Quantitative Developer at{" "}
-          <span style={{ color: "var(--fg)" }}>Ksan Relay</span>. Building
-          precise, data-forward systems with restraint and rigour.
-        </p>
-        <div className={styles.actions}>
-          <Link href="/projects" className="button button--primary">
-            View Projects
-          </Link>
-          <a
-            href="https://github.com/pizzaparth"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            GitHub <ArrowUpRight size={16} />
-          </a>
+      {/* 2-Column Hero */}
+      <section className={styles.hero} aria-label="Hero">
+        <div className={styles.heroContent}>
+          <div className={styles.telemetryTag}>
+            <span className="tech-label">Quantitative Developer // Portfolio</span>
+          </div>
+
+          <h1 className={styles.headline}>
+            Parth Pancholi
+          </h1>
+
+          <p className={styles.lead}>
+            Quantitative Developer at{" "}
+            <span style={{ color: "var(--fg)" }}>Ksan Relay</span>. Building
+            deterministic, high-throughput systems, low-latency infrastructure,
+            and numerical models with restraint and rigour.
+          </p>
+
+          <div className={styles.actions}>
+            <Link href="/projects" className="button button--primary">
+              View Projects
+            </Link>
+            <a
+              href="https://github.com/pizzaparth"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              GitHub <ArrowUpRight size={16} />
+            </a>
+          </div>
+        </div>
+
+        <div className={styles.terminalWrap}>
+          <TerminalCard />
         </div>
       </section>
 
@@ -43,7 +56,7 @@ export default function Home() {
           system is verifiable. My work spans low-latency infrastructure,
           numerical computing, and full-stack engineering.
         </p>
-        <Link href="/about" className="button" style={{ marginTop: 24 }}>
+        <Link href="/about" className="button" style={{ marginTop: 24, alignSelf: "flex-start" }}>
           Learn more
         </Link>
       </section>
@@ -58,7 +71,7 @@ export default function Home() {
           A curated selection of systems, tools, and experiments — from
           production infrastructure to research prototypes.
         </p>
-        <Link href="/projects" className="button" style={{ marginTop: 24 }}>
+        <Link href="/projects" className="button" style={{ marginTop: 24, alignSelf: "flex-start" }}>
           View all projects
         </Link>
       </section>

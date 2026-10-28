@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx oxlint@latest -c oxlint.json src/"
+    "lint": "oxlint -c oxlint.json src/"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.2.6",
