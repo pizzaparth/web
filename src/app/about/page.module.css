@@ -1,0 +1,77 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px;
+}
+
+.title {
+  font-size: var(--step-4);
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.content {
+  padding-block: var(--section-gap);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.subhead {
+  font-size: var(--step-2);
+  letter-spacing: -0.02em;
+}
+
+.skillList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--fg-2);
+  font-size: var(--step--1);
+  font-family: var(--font-mono);
+}
+
+.skillList li::before {
+  content: "→ ";
+  color: var(--fg-3);
+}
+
+.imageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait {
+  border: 1px solid var(--line);
+  border-radius: var(--r-card);
+  overflow: hidden;
+  box-shadow: var(--glow);
+  max-width: 400px;
+}
+
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .imageCol {
+    order: -1;
+  }
+
+  .portrait {
+    max-width: 300px;
+  }
+}
