@@ -1,0 +1,72 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <rect width="600" height="320" fill="#000000"/>
+  <!-- Matrix grid 6x6 -->
+  <!-- Col labels -->
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="middle">
+    <text x="210" y="55">EQ1</text>
+    <text x="250" y="55">EQ2</text>
+    <text x="290" y="55">FX1</text>
+    <text x="330" y="55">FX2</text>
+    <text x="370" y="55">CO1</text>
+    <text x="410" y="55">IR1</text>
+  </g>
+  <!-- Row labels -->
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,0.6)" text-anchor="end">
+    <text x="180" y="85">EQ1</text>
+    <text x="180" y="125">EQ2</text>
+    <text x="180" y="165">FX1</text>
+    <text x="180" y="205">FX2</text>
+    <text x="180" y="245">CO1</text>
+    <text x="180" y="285">IR1</text>
+  </g>
+
+  <!-- Row 1 -->
+  <rect x="192" y="66" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+  <rect x="232" y="66" width="36" height="36" fill="rgba(255,255,255,0.72)" stroke="#000"/>
+  <rect x="272" y="66" width="36" height="36" fill="rgba(255,255,255,0.18)" stroke="#000"/>
+  <rect x="312" y="66" width="36" height="36" fill="rgba(255,255,255,0.06)" stroke="#000"/>
+  <rect x="352" y="66" width="36" height="36" fill="rgba(255,255,255,0.32)" stroke="#000"/>
+  <rect x="392" y="66" width="36" height="36" fill="rgba(255,255,255,0.08)" stroke="#000"/>
+
+  <!-- Row 2 -->
+  <rect x="192" y="106" width="36" height="36" fill="rgba(255,255,255,0.72)" stroke="#000"/>
+  <rect x="232" y="106" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+  <rect x="272" y="106" width="36" height="36" fill="rgba(255,255,255,0.22)" stroke="#000"/>
+  <rect x="312" y="106" width="36" height="36" fill="rgba(255,255,255,0.04)" stroke="#000"/>
+  <rect x="352" y="106" width="36" height="36" fill="rgba(255,255,255,0.41)" stroke="#000"/>
+  <rect x="392" y="106" width="36" height="36" fill="rgba(255,255,255,0.14)" stroke="#000"/>
+
+  <!-- Row 3 -->
+  <rect x="192" y="146" width="36" height="36" fill="rgba(255,255,255,0.18)" stroke="#000"/>
+  <rect x="232" y="146" width="36" height="36" fill="rgba(255,255,255,0.22)" stroke="#000"/>
+  <rect x="272" y="146" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+  <rect x="312" y="146" width="36" height="36" fill="rgba(255,255,255,0.85)" stroke="#000"/>
+  <rect x="352" y="146" width="36" height="36" fill="rgba(255,255,255,0.11)" stroke="#000"/>
+  <rect x="392" y="146" width="36" height="36" fill="rgba(255,255,255,0.38)" stroke="#000"/>
+
+  <!-- Row 4 -->
+  <rect x="192" y="186" width="36" height="36" fill="rgba(255,255,255,0.06)" stroke="#000"/>
+  <rect x="232" y="186" width="36" height="36" fill="rgba(255,255,255,0.04)" stroke="#000"/>
+  <rect x="272" y="186" width="36" height="36" fill="rgba(255,255,255,0.85)" stroke="#000"/>
+  <rect x="312" y="186" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+  <rect x="352" y="186" width="36" height="36" fill="rgba(255,255,255,0.19)" stroke="#000"/>
+  <rect x="392" y="186" width="36" height="36" fill="rgba(255,255,255,0.44)" stroke="#000"/>
+
+  <!-- Row 5 -->
+  <rect x="192" y="226" width="36" height="36" fill="rgba(255,255,255,0.32)" stroke="#000"/>
+  <rect x="232" y="226" width="36" height="36" fill="rgba(255,255,255,0.41)" stroke="#000"/>
+  <rect x="272" y="226" width="36" height="36" fill="rgba(255,255,255,0.11)" stroke="#000"/>
+  <rect x="312" y="226" width="36" height="36" fill="rgba(255,255,255,0.19)" stroke="#000"/>
+  <rect x="352" y="226" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+  <rect x="392" y="226" width="36" height="36" fill="rgba(255,255,255,0.28)" stroke="#000"/>
+
+  <!-- Row 6 -->
+  <rect x="192" y="266" width="36" height="36" fill="rgba(255,255,255,0.08)" stroke="#000"/>
+  <rect x="232" y="266" width="36" height="36" fill="rgba(255,255,255,0.14)" stroke="#000"/>
+  <rect x="272" y="266" width="36" height="36" fill="rgba(255,255,255,0.38)" stroke="#000"/>
+  <rect x="312" y="266" width="36" height="36" fill="rgba(255,255,255,0.44)" stroke="#000"/>
+  <rect x="352" y="266" width="36" height="36" fill="rgba(255,255,255,0.28)" stroke="#000"/>
+  <rect x="392" y="266" width="36" height="36" fill="rgba(255,255,255,1.0)" stroke="#000"/>
+
+  <text x="50" y="35" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1">PAIRWISE COVARIANCE // OPACITY = CORRELATION COEFFICIENT</text>
+</svg>

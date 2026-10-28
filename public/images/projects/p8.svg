@@ -1,0 +1,21 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <rect width="600" height="320" fill="#000000"/>
+  <!-- Zero line -->
+  <line x1="50" y1="180" x2="550" y2="180" stroke="rgba(255,255,255,0.25)" stroke-dasharray="2,3"/>
+
+  <!-- PnL path -->
+  <path d="M 50 180 
+           L 90 160 L 130 170 L 170 140 L 210 110 L 250 125 L 290 95 L 330 80 
+           L 370 100 L 410 70 L 450 60 L 490 65 L 550 45" 
+        stroke="#ffffff" stroke-width="2" fill="none"/>
+
+  <!-- Drawdown underwater fill -->
+  <path d="M 50 250 L 550 250" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+  <path d="M 50 250 L 90 250 L 130 262 L 170 250 L 210 250 L 250 268 L 290 250 L 330 250 L 370 272 L 410 250 L 450 250 L 490 256 L 550 250 Z" 
+        fill="rgba(255,255,255,0.12)"/>
+  <path d="M 50 250 L 90 250 L 130 262 L 170 250 L 210 250 L 250 268 L 290 250 L 330 250 L 370 272 L 410 250 L 450 250 L 490 256 L 550 250" 
+        stroke="rgba(255,255,255,0.6)" stroke-width="1.2" fill="none"/>
+
+  <text x="50" y="35" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1">CUMULATIVE RETURN // SHARPE 3.42 · MAX DD -2.8%</text>
+  <text x="50" y="240" fill="rgba(255,255,255,0.4)" font-family="JetBrains Mono, monospace" font-size="9">UNDERWATER DRAWDOWN</text>
+</svg>

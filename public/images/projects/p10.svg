@@ -1,0 +1,26 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <rect width="600" height="320" fill="#000000"/>
+  <!-- Channels -->
+  <!-- Ch 1: Clock Pulse -->
+  <text x="40" y="80" fill="rgba(255,255,255,0.5)" font-family="JetBrains Mono, monospace" font-size="10">SYS_CLK</text>
+  <path d="M 110 85 L 130 85 L 130 65 L 150 65 L 150 85 L 170 85 L 170 65 L 190 65 L 190 85 L 210 85 L 210 65 L 230 65 L 230 85 L 250 85 L 250 65 L 270 65 L 270 85 L 290 85 L 290 65 L 310 65 L 310 85 L 330 85 L 330 65 L 350 65 L 350 85 L 370 85 L 370 65 L 390 65 L 390 85 L 410 85 L 410 65 L 430 65 L 430 85 L 450 85 L 450 65 L 470 65 L 470 85 L 490 85 L 490 65 L 510 65 L 510 85 L 530 85 L 530 65 L 550 65" 
+        stroke="rgba(255,255,255,0.4)" stroke-width="1.2" fill="none"/>
+
+  <!-- Ch 2: FEED_A -->
+  <text x="40" y="145" fill="rgba(255,255,255,0.8)" font-family="JetBrains Mono, monospace" font-size="10">ITCH_L3</text>
+  <path d="M 110 150 L 170 150 L 170 130 L 290 130 L 290 150 L 370 150 L 370 130 L 490 130 L 490 150 L 550 150" 
+        stroke="#ffffff" stroke-width="2" fill="none"/>
+
+  <!-- Ch 3: MATCH_OUT -->
+  <text x="40" y="210" fill="rgba(255,255,255,0.8)" font-family="JetBrains Mono, monospace" font-size="10">MATCH_EV</text>
+  <path d="M 110 215 L 190 215 L 190 195 L 250 195 L 250 215 L 390 215 L 390 195 L 450 195 L 450 215 L 550 215" 
+        stroke="#ffffff" stroke-width="2" fill="none"/>
+
+  <!-- Delta T marker -->
+  <line x1="170" y1="110" x2="170" y2="235" stroke="rgba(255,255,255,0.3)" stroke-dasharray="2,2"/>
+  <line x1="190" y1="110" x2="190" y2="235" stroke="rgba(255,255,255,0.3)" stroke-dasharray="2,2"/>
+  <line x1="170" y1="245" x2="190" y2="245" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="180" y="260" fill="#ffffff" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Δt = 18ns</text>
+
+  <text x="50" y="35" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1">ZERO-COPY DESERIALIZER // TIMING PULSES &amp; CYCLE TICK</text>
+</svg>

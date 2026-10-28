@@ -1,0 +1,21 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <rect width="600" height="320" fill="#000000"/>
+  <!-- Grid -->
+  <line x1="40" y1="50" x2="560" y2="50" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="40" y1="115" x2="560" y2="115" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="40" y1="180" x2="560" y2="180" stroke="rgba(255,255,255,0.2)" stroke-dasharray="2,4" stroke-width="1"/>
+  <line x1="40" y1="245" x2="560" y2="245" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <!-- Envelope +/- 2 sigma sqrt(t) -->
+  <path d="M 40 180 Q 300 90 560 60 L 560 300 Q 300 270 40 180 Z" fill="rgba(255,255,255,0.04)"/>
+  <path d="M 40 180 Q 300 90 560 60" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <path d="M 40 180 Q 300 270 560 300" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+  <!-- Faint paths -->
+  <path d="M 40 180 Q 120 160 200 190 T 360 140 T 480 170 T 560 130" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+  <path d="M 40 180 Q 140 210 220 170 T 380 230 T 490 200 T 560 240" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+  <path d="M 40 180 Q 110 140 230 150 T 370 120 T 470 110 T 560 85" stroke="rgba(255,255,255,0.2)" stroke-width="1" fill="none"/>
+  <path d="M 40 180 Q 150 190 250 220 T 390 210 T 500 250 T 560 270" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+  <!-- Highlighted path -->
+  <path d="M 40 180 L 80 170 L 130 195 L 170 160 L 220 145 L 260 155 L 310 130 L 370 145 L 420 115 L 470 125 L 510 95 L 560 102" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <circle cx="560" cy="102" r="3" fill="#ffffff"/>
+  <text x="50" y="35" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="11" letter-spacing="1">SIMULATED DIFFUSION // dX_t = μ dt + σ dW_t</text>
+</svg>
