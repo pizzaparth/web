@@ -3,7 +3,6 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import LogoMark from "./LogoMark";
 import styles from "./Navbar.module.css";
 
 const NAV_ITEMS = [
@@ -53,7 +52,6 @@ export default function Navbar() {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ""}`} aria-label="Main navigation">
         <Link href="/" className={styles.brand}>
-          <LogoMark size={24} />
           Parth Pancholi
         </Link>
 
