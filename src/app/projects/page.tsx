@@ -6,6 +6,7 @@ interface ProjectItem {
   id: string;
   title: string;
   label: string;
+  date: string;
   image: string;
   alt: string;
   lorem: string;
@@ -18,6 +19,7 @@ const PROJECTS: ProjectItem[] = [
     id: "ksan-orderbook",
     title: "ksan-orderbook",
     label: "01 // ENGINE",
+    date: "OCT 2024",
     image: "/images/projects/p1.svg",
     alt: "Limit order book depth visualization",
     lorem:
@@ -29,6 +31,7 @@ const PROJECTS: ProjectItem[] = [
     id: "stoch-diff",
     title: "stoch-diff",
     label: "02 // NUMERICS",
+    date: "AUG 2024",
     image: "/images/projects/p2.svg",
     alt: "Stochastic diffusion path simulation",
     lorem:
@@ -40,6 +43,7 @@ const PROJECTS: ProjectItem[] = [
     id: "arbitrage-mesh",
     title: "arbitrage-mesh",
     label: "03 // NETWORK",
+    date: "JUN 2024",
     image: "/images/projects/p3.svg",
     alt: "Triangular arbitrage mesh diagram",
     lorem:
@@ -51,6 +55,7 @@ const PROJECTS: ProjectItem[] = [
     id: "timeseries-quant",
     title: "timeseries-quant",
     label: "04 // STATS",
+    date: "APR 2024",
     image: "/images/projects/p4.svg",
     alt: "Autocorrelation function stem plot",
     lorem:
@@ -62,6 +67,7 @@ const PROJECTS: ProjectItem[] = [
     id: "latency-probe",
     title: "latency-probe",
     label: "05 // TELEMETRY",
+    date: "FEB 2024",
     image: "/images/projects/p5.svg",
     alt: "Kernel latency histogram and KDE plot",
     lorem:
@@ -73,6 +79,7 @@ const PROJECTS: ProjectItem[] = [
     id: "risk-matrix",
     title: "risk-matrix",
     label: "06 // DERIVATIVES",
+    date: "NOV 2023",
     image: "/images/projects/p6.svg",
     alt: "Implied volatility surface contour",
     lorem:
@@ -84,6 +91,7 @@ const PROJECTS: ProjectItem[] = [
     id: "signal-spectrum",
     title: "signal-spectrum",
     label: "07 // DSP",
+    date: "SEP 2023",
     image: "/images/projects/p7.svg",
     alt: "Power spectral density harmonic plot",
     lorem:
@@ -95,6 +103,7 @@ const PROJECTS: ProjectItem[] = [
     id: "hyper-backtest",
     title: "hyper-backtest",
     label: "08 // SIMULATION",
+    date: "JUN 2023",
     image: "/images/projects/p8.svg",
     alt: "Cumulative PnL and drawdown chart",
     lorem:
@@ -106,6 +115,7 @@ const PROJECTS: ProjectItem[] = [
     id: "matrix-kernel",
     title: "matrix-kernel",
     label: "09 // LINEAR ALGEBRA",
+    date: "MAR 2023",
     image: "/images/projects/p9.svg",
     alt: "Covariance correlation heatmap",
     lorem:
@@ -117,6 +127,7 @@ const PROJECTS: ProjectItem[] = [
     id: "relay-wire",
     title: "relay-wire",
     label: "10 // PROTOCOL",
+    date: "DEC 2022",
     image: "/images/projects/p10.svg",
     alt: "Zero copy binary wire timing diagram",
     lorem:
@@ -155,8 +166,13 @@ export default function ProjectsPage() {
 
               <div className={styles.body}>
                 <div className={styles.cardHeader}>
-                  <h2 className={styles.cardTitle}>{proj.title}</h2>
-                  <span className="tech-label">{proj.label}</span>
+                  <div className={styles.titleGroup}>
+                    <h2 className={styles.cardTitle}>{proj.title}</h2>
+                    <span className={styles.date}>{proj.date}</span>
+                  </div>
+                  <div className={styles.metaGroup}>
+                    <span className="tech-label">{proj.label}</span>
+                  </div>
                 </div>
 
                 <p className={styles.desc}>{proj.lorem}</p>

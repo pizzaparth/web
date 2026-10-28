@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import styles from "./TerminalCard.module.css";
 
 interface TerminalItem {
@@ -55,7 +54,6 @@ export default function TerminalCard() {
   const [inputVal, setInputVal] = useState("");
   const bodyRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const router = useRouter();
 
   useEffect(() => {
     if (bodyRef.current) {
@@ -111,7 +109,7 @@ export default function TerminalCard() {
     } else if (lower === "projects" || lower === "work") {
       output = (
         <span>
-          Selected systems:
+          <strong className={styles.outputHighlight}>Top Quantitative Systems:</strong>
           <br />
           1. <strong className={styles.outputHighlight}>ksan-orderbook</strong>{" "}
           — Lock-free L3 order matching engine (C++20)
@@ -125,12 +123,11 @@ export default function TerminalCard() {
           4. <strong className={styles.outputHighlight}>timeseries-quant</strong>{" "}
           — Real-time autocorrelation pipeline (Python)
           <br />
-          <span className={styles.outputDim}>
-            Navigating to /projects for full showcase...
+          <span className={styles.outputDim} style={{ display: "block", marginTop: 8 }}>
+            Click on the &quot;View Projects&quot; button above to see the rest of the projects.
           </span>
         </span>
       );
-      setTimeout(() => router.push("/projects"), 1200);
     } else if (lower === "contact" || lower === "email") {
       output = (
         <span>
@@ -156,7 +153,7 @@ export default function TerminalCard() {
     } else if (lower === "github") {
       output = (
         <span>
-          Redirecting to GitHub:{" "}
+          GitHub:{" "}
           <a
             href="https://github.com/pizzaparth"
             target="_blank"
@@ -183,7 +180,7 @@ export default function TerminalCard() {
           Languages, tools &amp; domains
           <br />
           &bull; <strong className={styles.outputHighlight}>projects</strong> —
-          Index of quantitative systems
+          Top quantitative systems
           <br />
           &bull; <strong className={styles.outputHighlight}>contact</strong> —
           Email and GitHub links
